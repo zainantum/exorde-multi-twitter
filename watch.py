@@ -8,7 +8,7 @@ import socket
 client = docker.from_env()
 
 def send_to_telegram(message):
-    apiURL = 'https://arbyter.pw/api/for-me'
+    apiURL = os.environ['BOT_URL']
     try:
         response = requests.post(apiURL, data={'info': message})
         print(response.text)
