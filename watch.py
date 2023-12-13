@@ -28,7 +28,7 @@ def check_rep(name, file):
             if "INFO:root:        twitter" in line:
                 tail = line.split("|")
                 list_rep_found.append(tail[-1])
-            if "INFO:root:      [Twitter] Email provided" in line:
+            if "INFO:root:       [Twitter] Email provided =" in line:
                 tail = line.split("=")
                 tw_mail = tail[-1]
     except StopIteration:
